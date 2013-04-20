@@ -17,19 +17,21 @@ Usage: yaraMail.py [options] smtpFile | imap Folder Name
 Yara Mail Scanner, use it to Scan Email Attatchments
 
 Options:
-  --version             show program's version number and exit
-  -h, --help            show this help message and exit
-  -r FILE, --Rules=FILE
-                        Yara Rule File
-  -e, --extract         Extract Files if Zip Archive detected Deafult is No
-
-  IMAP OPTIONS:
-    -u USER, --user=USER
-                        IMAP UserName
-    -p PASSWD, --passwd=PASSWD
-                        IMAP Password
-    -s SERVER, --server=SERVER
-                        IMAP ServerName
+--version
+		show program's version number and exit
+-h, --help
+		show this help message and exit
+-r FILE, --Rules=FILE
+		Yara Rule File
+-e, --extract
+		Extract Files if Zip Archive detected Deafult is No
+IMAP OPTIONS:
+-u USER, --user=USER
+		IMAP UserName
+-p PASSWD, --passwd=PASSWD
+		IMAP Password
+-s SERVER, --server=SERVER
+		IMAP ServerName
 
 ###What it will do:
 
