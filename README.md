@@ -3,14 +3,14 @@ yaraMail
 
 Yara Scanner For IMAP Feeds and saved Streams
 
-What it does:
-reads an smtp formated email file or connects to imap server
-reads emails and extracts attatchments. writes them to your os tmp dir
-Scans attatchemtns with chosen yara rule file.
-If emails contains a zip file it extracts all the files and scans them
-deletes the tmp dir created.
+###What it does:
+- reads an smtp formated email file or connects to imap server
+- reads emails and extracts attatchments. writes them to your os tmp dir
+- Scans attatchemtns with chosen yara rule file.
+- If emails contains a zip file it extracts all the files and scans them
+- deletes the tmp dir created.
 
-Usage:
+###Usage:
 
 python yaraMail.py
 Usage: yaraMail.py [options] smtpFile | imap Folder Name
@@ -31,10 +31,10 @@ Options:
     -s SERVER, --server=SERVER
                         IMAP ServerName
 
-What it will do:
+###What it will do:
 
-Accept POP Accounts.
-Nicer Output to screen.
-Write a report file. 
+- Accept POP Accounts.
+- Nicer Output to screen.
+- Write a report file. 
 
 
