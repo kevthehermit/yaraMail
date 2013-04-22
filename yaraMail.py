@@ -6,8 +6,8 @@ Python script to YaraScan Email Attatchments
 '''
 __description__ = 'Yara Mail Scanner, use it to Scan Email Attatchments'
 __author__ = 'Kevin Breen'
-__version__ = '0.0.2'
-__date__ = '2013/04/20'
+__version__ = '0.3'
+__date__ = '2013/04/22'
 
 
 import os
@@ -40,6 +40,16 @@ def main():
 	if len(args) != 2:
 		parser.print_help()
 	elif options.imap == True:
+		if not options.user:
+			parser.error("A Username is required for IMAP")
+			sys.exit()
+		if not options.passwd:
+			parser.error("A Password is required for IMAP")
+			sys.exit()
+		if not options.folder:
+			parser.error("A Folder name is required for IMAP")
+			sys.exit()
+			
 		emails = imapScan().parse(args[1], options.user, options.passwd, options.folder)
 		for message in emails:
 			attatch = attExtract().parse(message, options.extract)
@@ -50,6 +60,12 @@ def main():
 					reportMain(options.report, att, results)
 
 	elif options.pop == True:
+		if not options.user:
+			parser.error("A Username is required for POP")
+			sys.exit()
+		if not options.passwd:
+			parser.error("A Password is required for POP")
+			sys.exit()
 		emails = popScan().parse(args[1], options.user, options.passwd)
 		for message in emails:
 			attatch = attExtract().parse(message, options.extract)
